@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            background-color: #2c2c2c; /* Dark gray background */
+            color: #ffffff; /* White text */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+
+        .top {
+            height: 150px;
+            width: 100%;
+            background-color: #000000; /* Black background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            margin-top: -35%;
+        }
+
+        img.ppx {
+            height: 100px;
+            width: 100px;
+        }
+
+        .signup-form {
+            background-color: #444444; /* Slightly lighter gray for the form */
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+         margin-right: 50%;
+         margin-top: 12%;
+         transform: translate(350px);
+          
+        }
+
+        .signup-form h2 {
+            margin: 0 0 20px;
+            text-align: center;
+        }
+
+        .signup-form input[type="text"],
+        .signup-form input[type="password"],
+        .signup-form input[type="email"],
+        .signup-form input[type="tel"] {
+            width: calc(100% - 22px); /* Adjust width to account for padding */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #666666; /* Border color matching theme */
+            border-radius: 5px;
+            background-color: #333333; /* Darker gray for input fields */
+            color: #ffffff;
+            box-sizing: border-box; /* Include padding and border in width calculation */
+        }
+
+        .signup-form input[type="submit"] {
+            width: calc(100% - 22px); /* Adjust width to account for padding */
+            padding: 10px;
+            background-color: #555555; /* Slightly lighter gray for the button */
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+            box-sizing: border-box; /* Include padding and border in width calculation */
+        }
+
+        .signup-form input[type="submit"]:hover {
+            background-color: #666666; /* Button hover effect */
+        }
+
+        .signup-form .Not {
+            font-size: small;
+            margin: 20px 0 0; /* Space above the text */
+        }
+
+        .signup-form .signup-link {
+            display: block; /* Ensure link is on its own line */
+            text-align: left;
+            color: #ffffff; /* White text color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .signup-form .signup-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img src="PPX.jpg" alt="Profile Picture" class="ppx">
+    </div>
+
+    <div class="signup-form">
+        <h2>Sign Up</h2>
+        <form action="SignRecord.php" method="post">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="submit" value="Sign Up">
+            
+        </form>
+    </div>
+</body>
+</html>
